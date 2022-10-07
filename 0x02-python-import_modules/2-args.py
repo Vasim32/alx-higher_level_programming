@@ -1,14 +1,20 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    from sys import argv
-    userin = argv[1:]
-    size = len(userin)
-    print("{:d} {:s}{:s}".
-          format(size,
-                 "arguments" if (size) is not 1 else "argument",
-                 "." if (size) is 0 else ":"))
-    for i in range (length1):
-        print("{:d}: {:s}".format(i + 1, userin[i]))
-#    for idx, arg in enumerate(userin):
-#       print("{:d}: {:s}".format(idx + 1, arg))
 
+if __name__ == "__main__":
+    """This program prints the number of and the list of its arguments"""
+    import sys
+
+    argv = sys.argv
+    index = 1
+    counter = len(argv)-1
+
+    if counter == 1:
+        print("{} argument:".format(counter))
+        print("{}: {}".format(index, argv[counter]))
+    elif counter == 0:
+        print("{} arguments.".format(counter))
+    else:
+        print("{} arguments:".format(counter))
+        while index <= counter:
+            print("{}: {}".format(index, argv[index]))
+            index += 1
