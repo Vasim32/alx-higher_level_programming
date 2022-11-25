@@ -1,0 +1,5 @@
+#!/usr/bin/pyhton3
+"""This module returns a json representation of a string"""
+
+def to_json_string(my_obj):
+    
